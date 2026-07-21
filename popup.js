@@ -32,11 +32,13 @@ form.addEventListener("submit", (e) => {
 
   // Popup window, without any bar o tab
   browser.windows.create({
-    url,
+    url: url + "#_qsp",
     type: "popup",
     width: 900,
     height: 700,
   });
+
+  // window.location.href = url;
 
   window.close();
 });
