@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Quick Search Popup",
   "version": "1.0.0",
-  "description": "...",
+  "description": "Search from a compact popup and browse results without leaving it.",
   "browser_specific_settings": {
     "gecko": {
       "id": "quick-search-popup@local.ext",
@@ -19,5 +19,12 @@
       "suggested_key": { "default": "Ctrl+Shift+Space" },
       "description": "Open Popup"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }
