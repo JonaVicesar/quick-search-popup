@@ -16,7 +16,11 @@
     "48": "icons/icon-48.png",
     "96": "icons/icon-96.png"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "action": {
     "default_popup": "popup.html",
     "default_title": "Quick Search Popup"
@@ -25,6 +29,10 @@
     "_execute_action": {
       "suggested_key": { "default": "Ctrl+Shift+Space" },
       "description": "Open Popup"
+    },
+    "search-selection": {
+      "suggested_key": { "default": "Ctrl+Shift+F" },
+      "description": "Search selected text"
     }
   },
   "content_scripts": [
